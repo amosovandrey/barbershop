@@ -6,6 +6,7 @@
   --h-color: #303030;
   --accent-color: #ff6c00;
   --hero-background-color: rgba(25, 28, 38, 0.2);
+  --section-background-color: #e5e5e5;
 }
 
 p,
@@ -41,7 +42,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 448px;
+
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -59,6 +60,17 @@ body {
 }
 
 .btn {
+  padding: 12px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -97,7 +109,6 @@ body {
 
 .btn-menu-open {
   border: none;
-  background: transparent;
 }
 
 .menu-open-icon {
@@ -154,15 +165,18 @@ body {
   background-color: currentColor;
   content: '';
 }
+
 .title {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
+  line-height: 1.18;
 
   letter-spacing: 0.05em;
   color: var(--white);
   margin-bottom: 20px;
 }
+
 .hero-title {
   font-size: 48px;
   line-height: calc(56 / 48);
@@ -187,6 +201,7 @@ body {
 .about {
   padding-top: 84px;
   padding-bottom: 84px;
+  background: var(--section-background-color);
 }
 
 .about-pre-title {
@@ -209,13 +224,148 @@ body {
   line-height: calc(26 / 14);
 }
 .about-btn {
-  padding: 12px 20px;
-  border: 1px solid var(--accent-color);
-  border-radius: 25px;
+}
 
+.prices {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  background-image: url(../images/prices-bg-mob.png),
+    linear-gradient(#111319, #111319);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .prices {
+    background-image: url(../images/prices-bg-mob-2x.png),
+      linear-gradient(#111319, #111319);
+  }
+}
+
+.prices-title {
+  font-size: 40px;
+  margin-bottom: 44px;
+}
+
+.prices-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 30px 20px 30px 40px;
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  margin-bottom: 44px;
+}
+
+.prices-item {
+  display: flex;
+  font-size: 14px;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: 4px;
+}
+
+.prices-item::before {
+  content: '';
+  width: 0px;
+  height: 1px;
+  background: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+}
+
+.prices-item-text:first-child {
+  order: -1;
+}
+
+.prices-btn {
+  display: block;
+  color: var(--white);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 440px) {
+  .prices-pre-title {
+    font-size: 9px;
+  }
+
+  .pre-title::before {
+    width: 40px;
+  }
+
+  .prices-title {
+    font-size: 28px;
+  }
+
+  .prices-list {
+    padding: 30px 10px 30px 20px;
+  }
+
+  .prices-item {
+    font-size: 12px;
+  }
+}
+
+.benefits {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  background: var(--section-background-color);
+}
+
+.benefits-pre-title {
+  color: var(--h-color);
+}
+
+.benefits-title {
+  color: var(--h-color);
+  font-size: 40px;
+}
+
+.benefits-post-title {
+  font-size: 18px;
+  margin-bottom: 44px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.benefits-item {
+  display: block;
+  text-align: center;
+  padding: 20px 36px;
+  width: 194px;
+
+  background: #f7f7f7;
+}
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
+.benefits-item > span {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: calc(57 / 42);
+
+  letter-spacing: 0.05em;
+  color: var(--h-color);
+}
+
+.benefits-item > span::after {
+  text-align: center;
+  vertical-align: top;
+  content: '+';
+  color: var(--accent-color);
   font-weight: 600;
-  font-size: 12px;
-  line-height: calc(16 / 12);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+}
+
+.benefits-item-text {
+  font-weight: 600;
+  font-size: 9px;
+  line-height: calc(15 / 11);
+  color: var(--h-color);
 }
