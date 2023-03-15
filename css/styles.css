@@ -42,7 +42,7 @@ body {
 
 .container {
   width: 100%;
-
+  max-width: 447px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -214,6 +214,7 @@ body {
   line-height: calc(33 / 28);
   max-width: 306px;
 }
+
 .about-post-title {
   margin-bottom: 20px;
 }
@@ -222,8 +223,6 @@ body {
   margin-bottom: 40px;
   font-size: 14px;
   line-height: calc(26 / 14);
-}
-.about-btn {
 }
 
 .prices {
@@ -338,7 +337,7 @@ body {
   gap: 6px;
   align-items: center;
   justify-content: center;
-  padding: 16px 32px;
+  padding: 12px 32px;
   width: calc((100% - 60px) / 2);
   height: 133px;
 
@@ -378,4 +377,36 @@ body {
   line-height: calc(15 / 11);
   color: var(--h-color);
   text-align: center;
+}
+
+.barbers {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  background: #f7f7f7;
+}
+
+.barbers-pre-title {
+  color: var(--h-color);
+}
+
+.barbers-title {
+  color: var(--h-color);
+  margin-bottom: 44px;
+  font-size: 42px;
+}
+
+.barbers-list {
+}
+
+.barbers-item {
+}
+.barbers-item-title {
+}
+.barbers-item-text {
+}
+.barbers-soc-list {
+}
+.barbers-soc-item {
+}
+.barbers-soc-icon {
 }
